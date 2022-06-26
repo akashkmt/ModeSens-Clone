@@ -1,0 +1,63 @@
+{
+    "users" : [
+        {
+            "email" : "-------------",
+            "password" : "-------------",
+            "id" : "-------------",
+            "cart" : [
+                {
+                    "_id": "----",
+                    "brand": "----",
+                    "image_url": ["----"],
+                    "title": "---",
+                    "price": "---",
+                    "offprice": "---",
+                    "createdAt": "-----",
+                    "updatedAt": "------",
+                    "category" : "-------"
+                }
+            ]
+        }
+    ],
+    "products": {
+        "mens": [
+            {
+                "_id": "----",
+                "brand": "----",
+                "image_url": ["----"],
+                "title": "---",
+                "price": "---",
+                "offprice": "---",
+                "createdAt": "-----",
+                "updatedAt": "------",
+                "category" : "-------"
+            }
+        ],
+        "womens": [
+            {
+                "_id": "----",
+                "brand": "----",
+                "image_url": ["----"],
+                "title": "---",
+                "price": "---",
+                "offprice": "---",
+                "createdAt": "-----",
+                "updatedAt": "------",
+                "category" : "-------"
+            }
+        ],
+        "beauty": [
+            {
+                "_id": "----",
+                "brand": "----",
+                "image_url": ["----"],
+                "title": "---",
+                "price": "---",
+                "offprice": "---",
+                "createdAt": "-----",
+                "updatedAt": "------",
+                "category" : "-------"
+            }
+        ]
+    }
+}
