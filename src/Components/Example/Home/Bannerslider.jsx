@@ -42,7 +42,7 @@ function Example(props)
 
     return (
       <div className="n">
-          <Carousel  height={400} width={100} indicators={false} animation={"slide"} duration={700} swipe={false} cycleNavigation={true} NavButton={({onClick, className, style, next, prev}) => {
+          <Carousel interval={3000} height={400} width={100} indicators={false} animation={"slide"} duration={800} swipe={false} cycleNavigation={true} NavButton={({onClick, className, style, next, prev}) => {
             // Other logic
     
             return (
