@@ -608,6 +608,17 @@
         "category": "womens"
       },
       {
+        "_id": "62aa267f9854adea94d64c55",
+        "image_url": ["https://img.mytheresa.com/1000/1000/95/jpeg/catalog/product/94/P00574139.jpg"],
+        "brand": "AERIN",
+        "title": "speed sock sneaker",
+        "price": 161,
+        "offprice": 921,
+        "createdAt": "2022-05-05T11:13:23.718Z",
+        "updatedAt": "2022-05-05T11:13:23.718Z",
+        "category": "womens"
+      },
+      {
         "_id": "62aa267f9854adea94d64c56",
         "image_url": ["https://cdn.modesens.com/product/39934471_18?w=400&"],
         "brand": "VERSACE",
@@ -1110,15 +1121,15 @@
         "price": 61,
         "offprice": 91,
         "category": "beauty"
-      },
+      },,
       {
-        "_id": "62aa25c89854adea94d64c36",
-        "image_url": ["https://images.neimanmarcus.com/ca/7/product_assets/C/1/0/B/2/NMC10B2_mu.jpg"],
+        "_id": "62aa25c89854adea94d64c37",
+        "image_url": ["https://www.bergdorfgoodman.com/product_assets/C/1/4/4/M/BGC144M_mz.jpg"],
         "brand": "DIOR",
         "href": "https://www.nordstrom.com/s/trish-mcevoy-66-cream-blender-brush/3260886?utm_source=rakuten&utm_medium=affiliate&utm_campaign=z1KL9yrNyf4&utm_content=1&utm_term=772859&utm_channel=low_nd_affiliates&sp_source=rakuten&sp_campaign=z1KL9yrNyf4",
-        "title": "brush cream blender",
-        "price": 35,
-        "offprice": 60,
+        "title": "beuty booster conditioner",
+        "price": 61,
+        "offprice": 91,
         "category": "beauty"
       },
       {
