@@ -1,10 +1,14 @@
 import './App.css';
+import Navbar from './component/Navbar/Navbar';
+import {BrowserRouter} from "react-router-dom"
+import {Footer} from "./component/Footer/Footer"
 
 function App() {
   return (
-    <div className="App">
-      MODESENS CLONE
-    </div>
+    <BrowserRouter>
+    <Navbar/>
+    <Footer/>
+    </BrowserRouter>
   );
 }
 
