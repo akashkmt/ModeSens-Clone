@@ -8,12 +8,16 @@ import Community from './Community';
 import Trending from './Trending';
 import Bottom from './Downloadbanner';
 import { Footer } from './Footer';
-
+import Navbar from './Navbar/Navbar'
 import React from 'react'
+import { BrowserRouter } from 'react-router-dom';
 
 const Home = () => {
   return (
     <>
+    <BrowserRouter>
+    <Navbar></Navbar>
+    </BrowserRouter>
     <div className="div" style={{marginTop:"12.6vh"}}>
     <Example></Example>
     
