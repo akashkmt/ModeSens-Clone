@@ -37,7 +37,7 @@ function FirstData({ r }) {
           );
         })}
       </div>
-      <div style={{backgroundColor:"transparent"}} className="firstdata">{menu}</div>
+      <div style={{backgroundColor:"transparent"}} className="firstdataes">{menu}</div>
     </>
   );
 }

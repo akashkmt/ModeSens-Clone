@@ -12,15 +12,15 @@ function Navbar() {
   let isAuth = true;
   let setIsAuth = true;
   return (
-    <div className="navbarDiv">
-      <div className="navbar">
+    <div className="navbarDives">
+      <div className="navbares">
         <div className="logo">
           <img
             src="https://cdn.modesens.com/static/img/20190228newlogo-black.svg"
             alt=""
           ></img>
         </div>
-        <div className="links">
+        <div className="linkses">
           <Link
             to="women"
             onMouseEnter={() => {
