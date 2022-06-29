@@ -10,6 +10,7 @@
     height: 50px;
     padding-left: 1%;
     margin-top: 1%;
+    background-color: transparent !important;
     /* justify-content: space-between; */
   }
   
@@ -75,7 +76,7 @@
   .secondDiv
   {
     width: 80vw !important;
-    background-color: white;
+   background-color: transparent !important;
     margin-left: 0;
   }
   .secondDiv > div {
@@ -87,8 +88,10 @@
     border-top: 1px solid rgb(207, 200, 200);
     position: absolute;
     z-index: 10;
-    background-color: white;
+ 
     width: 88.7vw;
+    background-color: white;
+   
     
   }
   .secondDiv > div > div {
@@ -110,13 +113,13 @@
   .firstdata > div {
     z-index: 1;
     border: 1px solid rgb(213, 205, 205);
-    width: 100%;
-    
+    width: 90%;
+    position: absolute;
     display: grid;
     grid-template-columns: 23% 23% 23% 23%;
   margin-left: -5vw;
     padding-bottom: 4%;
- margin-top: 4vh !important;
+ margin-top: 3.5vh !important;
     
   }
   .firstdata > div > div {

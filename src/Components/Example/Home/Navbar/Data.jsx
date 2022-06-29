@@ -6,7 +6,7 @@ function Data({ r }) {
     <div>
       {console.log(r)}
       <div className="secondDiv">
-        <FirstData r={r} />
+        <FirstData style={{background:"transprant"}} r={r} />
       </div>
     </div>
   );
