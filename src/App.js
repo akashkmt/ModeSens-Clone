@@ -1,30 +1,31 @@
 import React from 'react';
-import {
-  ChakraProvider,
-  Box,
-  theme,
-} from '@chakra-ui/react';
-import Men from "./page/men";
-import Women from './page/women';
-import Beauty from './page/beauty';
-import ItemDetails from './page/itemDetails';
+
+import Men from "./Components/Page/Men";
+import Women from './Components/Page/Women';
+import Beauty from './Components/Page/Beauty';
+import ItemDetails from './Components/Page/ItemDetails';
 import { Routes, Route } from "react-router-dom";
+import './App.css'
+import Navbar from './Components/Navbar/Navbar';
+import Checkout from './Components/Checkout/Checkout';
 
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl" >
+    
+      <div className='App' style={{textAlign:'center'}} >
+        <Navbar />
       <Routes>
-        <Route path="/mens" element={<Men />} />
-        <Route path='/womens' element={<Women />} />
-        <Route path='/beauty' element={<Beauty />} />
-        <Route path='/mens/:productId'  element={<ItemDetails />}/>
-        <Route path='/womens/:productId'  element={<ItemDetails />}/>
-        <Route path='/beauty/:productId'  element={<ItemDetails />}/>
+        <Route path="/Mens" element={<Men />} />
+        <Route path='/Womens' element={<Women />} />
+        <Route path='/Beauty' element={<Beauty />} />
+        <Route path="/Checkout" element={ <Checkout />} />
+        <Route path='/Mens/:productId'  element={<ItemDetails />}/>
+        <Route path='/Womens/:productId'  element={<ItemDetails />}/>
+        <Route path='/Beauty/:productId'  element={<ItemDetails />}/>
       </Routes>
-      </Box>
-    </ChakraProvider>
+      </div>
+    
   );
 }
 

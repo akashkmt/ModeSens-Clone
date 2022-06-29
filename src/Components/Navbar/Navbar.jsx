@@ -22,7 +22,7 @@ function Navbar() {
         </div>
         <div className="links">
           <Link
-            to="women"
+            to="Womens"
             onMouseEnter={() => {
               console.log("mouse enter")
               let d = "women";
@@ -36,7 +36,7 @@ function Navbar() {
             WOMEN
           </Link>
           <Link
-            to="men"
+            to="Mens"
             onMouseEnter={() => {
               console.log("mouse enter")
               let d = "men";
@@ -56,7 +56,7 @@ function Navbar() {
             MEN
           </Link>
           <Link
-            to="products"
+            to="Beauty"
             onMouseEnter={() => {
               let d = "beauty";
               setMenu(
@@ -72,7 +72,7 @@ function Navbar() {
             BEAUTY
           </Link>
           <Link
-            to="men"
+            to="Mens"
             onMouseEnter={() => {
               let d = "kids";
               setMenu(
@@ -177,10 +177,10 @@ function Navbar() {
           </div>
           {/* {isAuth ? <div></div> : <SignupPopup />} */}
           <div>
-            <img
+            <Link to="/Checkout"><img
               src="https://cdn.modesens.com/static/img/20200612shopping_bag2.svg"
               alt=""
-            />
+            /></Link>
           </div>
           <div className="search">
             <img
