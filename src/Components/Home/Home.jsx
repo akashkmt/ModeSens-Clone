@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <>
    <div style={{marginLeft:"-1.3vh"}} className="h">
-    <Navbar></Navbar>
+    
    
     <div className="div" style={{marginTop:"12.6vh"}}>
     <Example></Example>
@@ -42,7 +42,7 @@ const Home = () => {
    <Community />
    </div>
     <Bottom></Bottom>
-    <Footer></Footer>
+   
     </div>
    </>
   )

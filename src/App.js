@@ -1,9 +1,12 @@
 import './App.css';
  import Home from './Components/Home/Home';
  import {Route ,Routes} from 'react-router-dom'
+import Navbar from './Components/Home/Navbar/Navbar';
+import { Footer } from './Components/Home/Footer';
 function App() {
   return (
     <>
+     <Navbar></Navbar>
      <Routes>
      
       {/* please Install These Packages : 
@@ -21,6 +24,7 @@ function App() {
       <Route path="/" element={<Home></Home>}/>
      
      </Routes>
+     <Footer></Footer>
     </>
   );
 }
