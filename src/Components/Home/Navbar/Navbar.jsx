@@ -14,11 +14,11 @@ function Navbar() {
   return (
     <div className="navbarDives">
       <div className="navbares">
-        <div className="logo">
-          <img
+        <div style={{marginLeft:"1vh"}} className="logo">
+          <Link to="/" ><img
             src="https://cdn.modesens.com/static/img/20190228newlogo-black.svg"
             alt=""
-          ></img>
+          ></img></Link>
         </div>
         <div className="linkses">
           <Link

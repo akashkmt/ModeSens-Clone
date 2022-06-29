@@ -15,9 +15,9 @@ import { BrowserRouter } from 'react-router-dom';
 const Home = () => {
   return (
     <>
-    <BrowserRouter>
+   <div style={{marginLeft:"-1.3vh"}} className="h">
     <Navbar></Navbar>
-    </BrowserRouter>
+   
     <div className="div" style={{marginTop:"12.6vh"}}>
     <Example></Example>
     
@@ -43,6 +43,7 @@ const Home = () => {
    </div>
     <Bottom></Bottom>
     <Footer></Footer>
+    </div>
    </>
   )
 }

@@ -1,9 +1,11 @@
 import './App.css';
  import Home from './Components/Home/Home';
+ import {Route ,Routes} from 'react-router-dom'
 function App() {
   return (
     <>
-      <div style={{marginLeft:"-1.3vh"}} className="h">
+     <Routes>
+     
       {/* please Install These Packages : 
        for image slider :
              npm i react-material-ui-carousel
@@ -16,8 +18,9 @@ function App() {
              npm install react-slick
           for tending , community:
             npm i react-items-carousel */}
-      <Home></Home>
-      </div>
+      <Route path="/" element={<Home></Home>}/>
+     
+     </Routes>
     </>
   );
 }
