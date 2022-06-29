@@ -75,7 +75,7 @@ function Summary({cart, clickedOnCheckout, setClickedOnCheckout,clickedOnPayment
         
       </div>
       {
-        clickedOnCheckout ? <button className='checkOutBtn' >PLACE ORDER</button> : <button onClick={() => {setClickedOnCheckout(!clickedOnCheckout)}} className='checkOutBtn' >GO TO CHECKOUT</button>
+        clickedOnCheckout ? <button className='checkOutBtn' >PLACE ORDER</button> : <button onClick={() => {setClickedOnCheckout(true)}} className='checkOutBtn' >GO TO CHECKOUT</button>
       }
       </div>
       {
