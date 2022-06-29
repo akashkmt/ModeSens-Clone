@@ -1,9 +1,10 @@
 import './App.css';
+import Checkout from './Components/Checkout/Checkout';
 
 function App() {
   return (
     <div className="App">
-      MODESENS CLONE
+      <Checkout />
     </div>
   );
 }
