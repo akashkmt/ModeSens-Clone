@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import style from "./Login.module.css";
-import Alert from '@mui/material/Alert';
-import Stack from '@mui/material/Stack';
+import { useAlert } from "react-alert";
 import CustomPopup from "./CustomPopUp";
 import { useNavigate } from "react-router";
 import { AuthContext } from "../../context/AuthContext";
@@ -19,6 +18,7 @@ const SignupPopup = () => {
   const { user, isLoading, isError } = useSelector((state) => state.user);
   const { cart } = useSelector((state) => state.cart)
   const dispatch = useDispatch();
+  const alert = useAlert();
 
 
   const handleChange = (e) => {
@@ -80,18 +80,18 @@ const SignupPopup = () => {
         user.email === formData.email &&
         user.password === formData.password
       ) {
-        alert("login success");
+        alert.success("login success");
         navigate("/");
         setIsAuth(true);
         flag = false;
       }
       else if (user.email === formData.email && formData.password !== user.password) {
-        alert("Wrong Password, Try again");
+        alert.error("Wrong password!");
         flag = false;
       }
     });
     if(flag){
-      alert("User Not Found, Please Sign in First");
+      alert.error("User Not Found, Please Sign in First");
     }
       // navigator("/");
     // setVisibility(false);
