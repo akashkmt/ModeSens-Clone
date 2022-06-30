@@ -1,10 +1,13 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import style from "./Login.module.css";
-import { useState } from "react";
+import Alert from '@mui/material/Alert';
+import Stack from '@mui/material/Stack';
 import CustomPopup from "./CustomPopUp";
 import { useNavigate } from "react-router";
 import { AuthContext } from "../../context/AuthContext";
 import pic from "../signinImage/singin-img.jpg";
+import { useDispatch, useSelector } from "react-redux";
+import { getUserData, getUserError, getUserLoading } from "../../redux/login/action";
 
 const SignupPopup = () => {
   const navigate = useNavigate();
@@ -13,7 +16,11 @@ const SignupPopup = () => {
   const [FormData, setFormData] = useState({});
   const [formData, setformData] = useState({});
   const { isAuth, setIsAuth } = useContext(AuthContext);
-  let data;
+  const { user, isLoading, isError } = useSelector((state) => state.user);
+  const { cart } = useSelector((state) => state.cart)
+  const dispatch = useDispatch();
+
+
   const handleChange = (e) => {
     const inputName = e.target.name;
 
@@ -43,34 +50,53 @@ const SignupPopup = () => {
       alert("Fill the details Correctly");
     }
   };
-  const getData = () => {
-    data = JSON.parse(localStorage.getItem("RegisteredData")) || [];
+  const getData = async () => {
+    try {
+
+      dispatch(getUserLoading());
+      let res = await fetch(`http://localhost:8080/users`);
+      let data = await res.json();
+      dispatch(getUserData(data))
+
+    } catch (error) {
+      dispatch(getUserError());
+    }
+
   };
+
+  React.useEffect(() => {
+    getData();
+  }, [dispatch])
+
+  console.log("user", user);
+  console.log("form", formData);
+
   const handleLogin = (e) => {
     e.preventDefault();
-    // console.log(formData);
-    getData();
-    // console.log(data);
-    if (data.length > 0) {
+    // getData();
+    let flag = true;
+    user.forEach(user => {
       if (
-        data[0].email === formData.email &&
-        data[0].password === formData.password
+        user.email === formData.email &&
+        user.password === formData.password
       ) {
+        alert("login success");
         navigate("/");
         setIsAuth(true);
-      } else if (formData.email !== data[0].email) {
-        alert("User Not Found, Please Sign in First");
-        navigator("/");
-        setVisibility(false);
-      } else if (formData.password !== data[0].password) {
-        alert("Wrong Password, Try again");
+        flag = false;
       }
-    } else {
-      alert("First Sign in");
-      navigate("/join");
-      setVisibility(false);
+      else if (user.email === formData.email && formData.password !== user.password) {
+        alert("Wrong Password, Try again");
+        flag = false;
+      }
+    });
+    if(flag){
+      alert("User Not Found, Please Sign in First");
     }
-  };
+      // navigator("/");
+    // setVisibility(false);
+  }
+
 
   const handleChangeLogin = (e) => {
     let inputName = e.target.name;
@@ -268,20 +294,20 @@ const SignupPopup = () => {
                 <a
                   href="#"
                   className={style.signinLogin}
-                onClick={() => setLogin(true)}
+                  onClick={() => setLogin(true)}
                 >
-                Already have an account? Please sign in.
-              </a>
-              <div className={style.signinfooter}>
-                By creating an account, I agree to the{" "}
-                <a href="##">Terms Of Use </a>
-                and the <a href="##">Privacy Policy</a>
+                  Already have an account? Please sign in.
+                </a>
+                <div className={style.signinfooter}>
+                  By creating an account, I agree to the{" "}
+                  <a href="##">Terms Of Use </a>
+                  and the <a href="##">Privacy Policy</a>
+                </div>
               </div>
             </div>
-            </div>
           )}
-      </div>
-    </CustomPopup>
+        </div>
+      </CustomPopup>
     </>
   );
 };

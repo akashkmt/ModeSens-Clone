@@ -1,31 +1,31 @@
-import { GET_USER_DATA, GET_USER_ERROR, GET_USER_LOADING } from "./actionTypes"
+import { GET_CART_DATA, GET_CART_ERROR, GET_CART_LOADING } from "./actionTypes"
 
 const initState = {
-    user: [],
+    cart: [],
     isLoading: false,
-    isError: false
+    iserror: false
 }
 
-const loginReducer = (state = initState, { type, payload }) => {
+const cartReducer = (state = initState, { type, payload }) => {
     switch (type) {
-        case GET_USER_LOADING:
+        case GET_CART_LOADING:
             return {
                 ...state,
-                user: [],
+                cart: [],
                 isLoading: true,
                 isError: false
             }
-        case GET_USER_ERROR:
+        case GET_CART_ERROR:
             return {
                 ...state,
-                user: [],
+                cart: [],
                 isLoading: false,
                 isError: true
             }
-        case GET_USER_DATA:
+        case GET_CART_DATA:
             return {
                 ...state,
-                user: [...payload],
+                cart: [...payload],
                 isLoading: false,
                 isError: true
             }
@@ -34,4 +34,4 @@ const loginReducer = (state = initState, { type, payload }) => {
     }
 }
 
-export default loginReducer;
+export default cartReducer;
