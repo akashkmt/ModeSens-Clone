@@ -8,6 +8,7 @@ import { Routes, Route } from "react-router-dom";
 import './App.css'
 import Navbar from './Components/Navbar/Navbar';
 import Checkout from './Components/Checkout/Checkout';
+import {Footer} from './Components/Footer/Footer';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path='/Womens/:productId'  element={<ItemDetails />}/>
         <Route path='/Beauty/:productId'  element={<ItemDetails />}/>
       </Routes>
+      <Footer />
       </div>
     
   );

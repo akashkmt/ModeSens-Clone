@@ -47,7 +47,7 @@ function AddressForm({setClickedOnCheckout, setClickedOnPaymentMethod }) {
             disabled
             id="country-name"
             label="Country"
-            defaultValue="United States"
+            defaultValue="India"
             variant="standard"
           />
           <TextField

@@ -1,10 +1,10 @@
 import React from 'react';
 import './ItemCard.css';
 
-function ItemCard({item}) {
+function ItemCard({item,handleDeleteItemInCart, clickedOnCheckout}) {
     // console.log(item);
   return (
-    <div className='card-box' key={item.id}>
+    <div className='card-box'>
         <div className='card-box-child-1'>
             <img src={item.image_url[0]} alt="" />
         </div>
@@ -14,7 +14,9 @@ function ItemCard({item}) {
             <p>{item.price}.00</p>
             <p>Quantity : 1</p>
         </div>
-        <button className='deleteFromCartBtn'>X</button>
+        {
+            ! clickedOnCheckout ? <button onClick={()=> {handleDeleteItemInCart(item._id)}} className='deleteFromCartBtn'>X</button> : null
+        }
     </div>
   )
 }
