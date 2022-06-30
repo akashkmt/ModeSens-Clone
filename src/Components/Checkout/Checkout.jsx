@@ -1,29 +1,72 @@
 import React from 'react'
 import AddressForm from './AddressForm/AddressForm'
 import ShoppingBag from './ShoppingBag/ShoppingBag'
-import Summary from './Summary/Summary'
+import Summary from './Summary/Summary';
+import { Link } from 'react-router-dom';
+import "./Checkout.css"
 
 function Checkout() {
   const [clickedOnCheckout, setClickedOnCheckout] = React.useState(false);
   const [clickedOnPaymentMethod, setClickedOnPaymentMethod] = React.useState(false);
-  const id = 1;
+  const userId = 1;
   const [cart, setCart] = React.useState([]);
 
+  const emptyCart = async () => {
+    try {
+      let updatedCart = [];
+      await fetch(`http://localhost:8080/users/${userId}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            cart: updatedCart
+            })
+        });
+        getData(userId);
+
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  const handleDeleteItemInCart = async(itemId) => {
+    try {
+      let allCartData = await fetch(`http://localhost:8080/users/${userId}`);
+      let allCartDataJson = await allCartData.json();
+      let cart = allCartDataJson.cart;
+      let updatedCart = cart.filter(item => item._id !== itemId);
+
+      await fetch(`http://localhost:8080/users/${userId}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            cart: updatedCart
+            })
+        });
+        getData(userId);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  const getData = async (userId) => {
+    try {
+      let data = await fetch(`http://localhost:8080/users/${userId}`);
+      let result = await data.json();
+      setCart(result.cart);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   React.useEffect(() => {
-    const getData = async () => {
-      try {
-        let data = await fetch(`http://localhost:8080/users/${id}`);
-        let result = await data.json();
-        setCart(result.cart);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getData();
+    getData(userId);
   },[])
   return (
     <>
-    <h1>NAVBAR</h1>
     <div>
         <h1 style={{color:"#1C1C1C", fontWeight:"700!important", fontSize:"1.7rem"}}>MODESENS CONCIERGE</h1>
         {
@@ -33,15 +76,28 @@ function Checkout() {
           <span>- enjoy a worry free experience with no additional cost to you.</span>    
       </p> : null
         }
+        
         {
-          clickedOnCheckout ? <AddressForm clickedOnCheckout={ clickedOnCheckout } setClickedOnCheckout = {setClickedOnCheckout} clickedOnPaymentMethod={clickedOnPaymentMethod} setClickedOnPaymentMethod={setClickedOnPaymentMethod} /> : null
+          cart.length > 0 ? <>{
+            clickedOnCheckout ? <AddressForm clickedOnCheckout={ clickedOnCheckout } setClickedOnCheckout = {setClickedOnCheckout} clickedOnPaymentMethod={clickedOnPaymentMethod} setClickedOnPaymentMethod={setClickedOnPaymentMethod} /> : null
+          }
+          <br />
+          <ShoppingBag cart={cart} handleDeleteItemInCart={handleDeleteItemInCart} clickedOnCheckout={clickedOnCheckout} />
+          <br />
+          <Summary cart={cart} clickedOnCheckout={ clickedOnCheckout } setClickedOnCheckout = {setClickedOnCheckout} clickedOnPaymentMethod={clickedOnPaymentMethod} setClickedOnPaymentMethod={setClickedOnPaymentMethod} emptyCart={emptyCart}/></> : <div className='detailsWhenCartIsEmpty'>
+            <div className='cartEmptySpanDiv'>
+            <p>YOUR SHOPPING BAG IS EMPTY</p>
+            <p>You haven't added any pieces to your bag - yet</p>
+            </div>
+            <img src="https://cdn.modesens.com/static/img/20190618_nothing.svg" alt="" />
+            <div className='detailsWhenCartIsEmptyBtnDiv'>
+              <Link to="/Womens"><button className='clickableButton'>SHOP WOMEN</button></Link>
+              <Link to="/Mens"><button className='clickableButton'>SHOP MEN</button></Link>
+              <Link to="/Beauty"><button className='clickableButton'>SHOP BEAUTY</button></Link>
+            </div>
+          </div>
         }
-        <br />
-        <ShoppingBag cart={cart} />
-        <br />
-        <Summary cart={cart} clickedOnCheckout={ clickedOnCheckout } setClickedOnCheckout = {setClickedOnCheckout} clickedOnPaymentMethod={clickedOnPaymentMethod} setClickedOnPaymentMethod={setClickedOnPaymentMethod}/>
     </div>
-    <h1>FOOTER</h1>
     </>
   )
 }
