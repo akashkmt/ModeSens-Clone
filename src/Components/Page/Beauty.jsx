@@ -24,7 +24,7 @@ const Beauty = () => {
       <Wrapper>
         <Left>
           <LeftSide />
-          <h1>left</h1>
+          
         </Left>
         <Right>
           <Items props='beauty' />
