@@ -18,11 +18,11 @@ function FirstData({ r }) {
 
   return (
     <>
-      <div>
+      <div >
         {secData.map((el, i) => {
           let a = el.toLowerCase();
           return (
-            <div key={i} className="secData">
+            <div style={{backgroundColor:"transparent"}} key={i} className="secData">
               <a
                 href={`/${r}/${a}`}
                 onMouseEnter={(e) => {
@@ -37,7 +37,7 @@ function FirstData({ r }) {
           );
         })}
       </div>
-      <div className="firstdata">{menu}</div>
+      <div style={{backgroundColor:"transparent"}} className="firstdataes">{menu}</div>
     </>
   );
 }

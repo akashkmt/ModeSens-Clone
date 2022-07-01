@@ -5,8 +5,8 @@ function Data({ r }) {
   return (
     <div>
       {console.log(r)}
-      <div className="secondDiv">
-        <FirstData r={r} />
+      <div className="secondDives">
+        <FirstData style={{background:"transprant"}} r={r} />
       </div>
     </div>
   );
