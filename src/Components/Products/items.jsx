@@ -68,7 +68,8 @@ const TextDiv = styled.div`
   justify-content: flex-end;
   box-sizing: border-box;
   text-align: center;
-  margin-top: -40px;
+  margin-top: -50px;
+  
   
 
   & span {
@@ -85,6 +86,8 @@ const Header = styled.h1`
   font-size: 24px;
   font-family: "Open Sans", sans-serif;
   color:black;
+  margin-right:150px;
+  
 `;
 const SubHead = styled.p`
   font-size: 14px;
@@ -95,10 +98,10 @@ const SubHead = styled.p`
 `;
 const HeartImg = styled.img``;
 
-const Items = ({props}) => {
-    const name={props}
-    const category=name.props;
-    console.log(category)
+const Items = ({ props }) => {
+  const name = { props }
+  const category = name.props;
+  console.log(category)
   const [page, setPage] = useState(1);
   const [items, setItems] = useState([]);
   const [grid2, setgrid2] = useState(false);
@@ -141,9 +144,9 @@ const Items = ({props}) => {
   return (
     <div>
       <div>
-        <Header>{category=='mens'?'Men Collection'
-        :category=='womens'?'Womens Collection'
-      :'Beauty Collection'}</Header>
+        <Header>{category == 'mens' ? 'Men Collection'
+          : category == 'womens' ? 'Womens Collection'
+            : 'Beauty Collection'}</Header>
         <SubHead>
           Shop Awesome attire with price comparison across 500+ stores in one
           place. Discover the latest brands in men's Collection.
@@ -151,8 +154,8 @@ const Items = ({props}) => {
       </div>
       <div className={styles.pagdiv} style={{ marginTop: "-150px" }}>
         <div className={styles.paginationWrap}>
-          <div className={styles.pagination} style={{color:'black'}}>
-            <span  onClick={() => setPage(1)}>1</span>
+          <div className={styles.pagination} style={{ color: 'black' }}>
+            <span onClick={() => setPage(1)}>1</span>
             <span onClick={() => setPage(2)}>2</span>
             <span onClick={() => setPage(3)}>3</span>
             <span onClick={() => setPage(4)}>4</span>
@@ -217,80 +220,92 @@ const Items = ({props}) => {
         </div>
       </div>
       <Wrapper grid2={grid2} grid3={grid3}>
-        {items.map((e) => 
-           (
-            <Container
-              onClick={() => {
-                handleUser(e);
-              }}
-              key={e._id}
-            >
-             
-             <Link to={`/${category}/${e._id}`} style={{ textDecoration: "none" }}>
-                <HeartDIv>
-                  <HeartImg
-                    src="https://cdn.modesens.com/static/img/20210601heart.svg"
-                    alt=""
-                  />
-                </HeartDIv>
+        {items.map((e) =>
+        (
+          <Container
+            onClick={() => {
+              handleUser(e);
+            }}
+            key={e._id}
+          >
+
+            <Link to={`/${category}/${e._id}`} style={{ textDecoration: "none" }}>
+              <HeartDIv>
+                <HeartImg
+                  src="https://cdn.modesens.com/static/img/20210601heart.svg"
+                  alt=""
+                />
+              </HeartDIv>
+              <div
+                style={{
+                  display: "flex",
+                  border: "none",
+                  justifyContent: "center",
+                  padding: "20px 8px",
+                }}
+              >
                 <div
                   style={{
-                    display: "flex",
-                    border: "none",
-                    justifyContent: "center",
-                    padding: "20px 8px",
+                    width: "70%",
+                    height: "220px",
+                    overflow: "hidden",
                   }}
                 >
-                  <div
-                    style={{
-                      width: "70%",
-                      height: "220px",
-                      overflow: "hidden",
-                    }}
-                  >
-                    <SlideItem src={e.image_url} />
+                  <SlideItem src={e.image_url} />
+                </div>
+              </div>
+              <div style={{ display: "flex", justifyContent: "center", color: "black" }}>
+                <Button>Quick View</Button>
+              </div>
+              <TextDiv>
+                <div>
+                  <div style={{ paddingTop: "20px",marginTop:"10px" }}>
+                    <h5
+                      style={{
+                        color: "black",
+                        fontSize: "15px",
+                        textAlign: "center",
+                        fontWeight: "bold",
+                        // marginTop:"0px",
+
+
+                      }}
+                    >
+                      {e.brand}
+                    </h5>
+                  </div>
+                  <div style={{ paddingBottom: "35px",marginBottom:"10px" }}>
+                    <p
+                      style={{
+                        fontSize: "12px",
+                        textAlign: "center",
+                        color: "gray",
+                        // lineHeight:"10px",
+                      }}
+                    >
+                      {e.title}
+                    </p>
+
+
+                    <h6
+                      style={{
+                        color: "black",
+                      }}
+                    >
+                      ₹{e.price}-₹{e.offprice}
+                    </h6>
+                    <span style={{ color: "gray" }}>
+                      {Math.floor(Math.random() * (20 - 5 + 1)) + 5}-store
+                    </span>
                   </div>
                 </div>
-                <div style={{ display: "flex", justifyContent: "center",color:"black" }}>
-                  <Button>Quick View</Button>
-                </div>
-                <TextDiv>
-                  <h5
-                    style={{
-                      color: "black",
-                      fontSize: "15px",
-                      textAlign: "center",
-                      fontWeight: "bold",
-                    }}
-                  >
-                    {e.brand}
-                  </h5>
-                  <p
-                    style={{
-                      fontSize: "12px",
-                      textAlign: "center",
-                      color: "gray",
-                    }}
-                  >
-                    {e.title}
-                  </p>
-                  <h6
-                    style={{
-                      color: "black",
-                    }}
-                  >
-                    ${e.price}-${e.offprice}
-                  </h6>
-                  <span style={{ color: "gray" }}>
-                    {Math.floor(Math.random() * (20 - 5 + 1)) + 5}-store
-                  </span>
-                </TextDiv>
-              </Link>
+              </TextDiv>
+            </Link>
 
 
 
-            </Container>
-          )
+          </Container>
+        )
         )}
       </Wrapper>
     </div>
