@@ -7,8 +7,8 @@ import ThirdSlider from "./SpacialOfferSlider";
 import Community from './Community';
 import Trending from './Trending';
 import Bottom from './Downloadbanner';
-import { Footer } from './Footer';
-import Navbar from './Navbar/Navbar'
+import { Footer } from '../footers/Footer';
+import Navbar from '../Navbars/Navbar'
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom';
 
