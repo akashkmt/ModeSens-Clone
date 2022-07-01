@@ -68,8 +68,8 @@ const SignupPopup = () => {
     getData();
   }, [dispatch])
 
-  console.log("user", user);
-  console.log("form", formData);
+  //console.log("user", user);
+  // console.log("form", formData);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -111,7 +111,7 @@ const SignupPopup = () => {
       {isAuth ? (
         <div>
           <img
-            src="	https://cdn.modesens.com/user?w=400"
+            src="https://cdn.modesens.com/user?w=400"
             alt="jjj"
           />
         </div>
