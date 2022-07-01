@@ -1,12 +1,11 @@
 import React from 'react';
-
 import Men from "./Components/Page/Men";
 import Women from './Components/Page/Women';
 import Beauty from './Components/Page/Beauty';
 import ItemDetails from './Components/Page/ItemDetails';
 import { Routes, Route } from "react-router-dom";
 import './App.css'
-//import Navbar from './Components/Navbar/Navbar';
+// import Navbar from './Components/Navbar/Navbar';
 import Checkout from './Components/Checkout/Checkout';
 import {Footer} from './Components/Footer/Footer';
 import Navbar from './Components/Navbars/Navbar';

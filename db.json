@@ -1,16 +1,114 @@
 {
   "users": [
     {
-      "email": "-------------",
-      "password": "-------------",
-      "id": 2,
-      "cart": []
-    },
-    {
-      "email": "akashkmt963@gmail.com",
-      "password": "AAaa@123",
       "cart": [],
       "id": "1"
+    },
+    {
+      "email": "a@g.com",
+      "password": "123",
+      "id": "1",
+      "cart": [
+        {
+          "id": "62aa25c89854adea94d64c32",
+          "image_url": [
+            "https://n.nordstrommedia.com/id/sr3/464f00db-8256-4d70-895b-1b8f0e9a65f4.jpeg?w=780&h=838",
+            "https://www.net-a-porter.com/variants/images/17957409496260691/ou/w1000.jpg",
+            "https://www.net-a-porter.com/variants/images/17957409496260691/e1/w1000.jpg",
+            "https://cdn.modesens.com/media/85080196?w=400&"
+          ],
+          "brand": "DIOR",
+          "href": "https://www.nordstrom.com/s/trish-mcevoy-66-cream-blender-brush/3260886?utm_source=rakuten&utm_medium=affiliate&utm_campaign=z1KL9yrNyf4&utm_content=1&utm_term=772859&utm_channel=low_nd_affiliates&sp_source=rakuten&sp_campaign=z1KL9yrNyf4",
+          "title": "brush cream blender",
+          "price": 35,
+          "offprice": 60,
+          "category": "beauty"
+        },
+        {
+          "id": "62aa26299854adea94d64c41",
+          "brand": "ZIMMERAMANN",
+          "image_url": [
+            "https://img.ssensemedia.com/images/221476M192013_1/white-silk-shirt.jpg",
+            "https://dr89u07j3vi3h.cloudfront.net/31wCX8rcm29KAZySNRZ65Zfa",
+            "https://cdn.modesens.com/media/131247662?w=400&",
+            "https://cdn.modesens.com/media/131247665?w=400&",
+            "https://cdn.modesens.com/media/131445634?w=400&",
+            "https://cdn.modesens.com/media/131380365?w=400&"
+          ],
+          "title": "little kid and kids the simpsons",
+          "price": 125,
+          "offprice": 240,
+          "createdAt": "2022-05-05T08:06:41.352Z",
+          "updatedAt": "2022-05-05T08:06:41.352Z",
+          "category": "mens"
+        },
+        {
+          "id": "62aae84bc5017139f4854d84",
+          "image_url": [
+            "https://cdn.modesens.com/product/40013163?w=400&"
+          ],
+          "brand": "VERSACE",
+          "title": "little kid and kids the simpsons",
+          "price": 912,
+          "offprice": 1118,
+          "createdAt": "2022-05-05T11:14:01.535Z",
+          "updatedAt": "2022-05-05T11:14:01.535Z",
+          "category": "womens"
+        }
+      ]
+    },
+    {
+      "email": "t@g.com",
+      "password": "123",
+      "id": "3",
+      "cart": [
+        {
+          "id": "62aa25c89854adea94d64c32",
+          "image_url": [
+            "https://n.nordstrommedia.com/id/sr3/464f00db-8256-4d70-895b-1b8f0e9a65f4.jpeg?w=780&h=838",
+            "https://www.net-a-porter.com/variants/images/17957409496260691/ou/w1000.jpg",
+            "https://www.net-a-porter.com/variants/images/17957409496260691/e1/w1000.jpg",
+            "https://cdn.modesens.com/media/85080196?w=400&"
+          ],
+          "brand": "DIOR",
+          "href": "https://www.nordstrom.com/s/trish-mcevoy-66-cream-blender-brush/3260886?utm_source=rakuten&utm_medium=affiliate&utm_campaign=z1KL9yrNyf4&utm_content=1&utm_term=772859&utm_channel=low_nd_affiliates&sp_source=rakuten&sp_campaign=z1KL9yrNyf4",
+          "title": "brush cream blender",
+          "price": 35,
+          "offprice": 60,
+          "category": "beauty"
+        },
+        {
+          "id": "62aa26299854adea94d64c41",
+          "brand": "ZIMMERAMANN",
+          "image_url": [
+            "https://img.ssensemedia.com/images/221476M192013_1/white-silk-shirt.jpg",
+            "https://dr89u07j3vi3h.cloudfront.net/31wCX8rcm29KAZySNRZ65Zfa",
+            "https://cdn.modesens.com/media/131247662?w=400&",
+            "https://cdn.modesens.com/media/131247665?w=400&",
+            "https://cdn.modesens.com/media/131445634?w=400&",
+            "https://cdn.modesens.com/media/131380365?w=400&"
+          ],
+          "title": "little kid and kids the simpsons",
+          "price": 125,
+          "offprice": 240,
+          "createdAt": "2022-05-05T08:06:41.352Z",
+          "updatedAt": "2022-05-05T08:06:41.352Z",
+          "category": "mens"
+        },
+        {
+          "id": "62aae84bc5017139f4854d84",
+          "image_url": [
+            "https://cdn.modesens.com/product/40013163?w=400&"
+          ],
+          "brand": "VERSACE",
+          "title": "little kid and kids the simpsons",
+          "price": 912,
+          "offprice": 1118,
+          "createdAt": "2022-05-05T11:14:01.535Z",
+          "updatedAt": "2022-05-05T11:14:01.535Z",
+          "category": "womens"
+        }
+      ]
     }
   ],
   "mens": [
