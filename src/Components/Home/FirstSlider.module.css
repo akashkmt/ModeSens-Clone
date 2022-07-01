@@ -1,0 +1,254 @@
+.popUp {
+  width: 71.375rem !important;
+  height: 25rem;
+  border-radius: 5px;
+  flex-direction: row;
+}
+.popUp_2 {
+  width: 69rem !important;
+  height: 10.4rem;
+  border-radius: 5px;
+  flex-direction: row;
+}
+
+.features {
+  font-size: 2vw;
+  text-align: center;
+  margin-top: 6.2vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+}
+.disc {
+  font-size: 1.4rem;
+  color: #807d7d;
+  margin-top: -16px;
+  text-align: center;
+  font-weight: 350;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.hrDiv {
+  margin-top: 5rem;
+  position: relative;
+}
+
+.hrDiv > hr {
+  width: 84%;
+  
+  height: 0.1px;
+  
+}
+.hrDiv > p {
+  font-size: 1.73rem;
+  background-color: white;
+  position: absolute;
+  margin-top: -15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 520;
+}
+.popUp__3 {
+  width: 22.563rem !important;
+  height: 37.375rem;
+  margin-left: 0vh;
+  display: flex;
+  flex-direction: column;
+ 
+  position: relative;
+  border: 0.1vh solid transparent;
+  border-radius: 1vh;
+  overflow: hidden;
+  
+  
+}
+
+.popUp__3 > div:nth-child(1) {
+  width: 22.625rem !important;
+  height: 28.5rem;
+ 
+ 
+}
+.popUp__3 > div:nth-child(2) {
+  width: 22.625rem !important;
+
+  height: 9.063rem;
+}
+
+.popUp__3 > div:nth-child(2) > p:nth-child(1) {
+  font-size: 1.35rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 2.5vh;
+}
+.popUp__3 > div:nth-child(2) > p:nth-child(2) {
+  margin-top: -15px;
+  text-align: center;
+
+}
+
+.popUp__3 > div:nth-child(2) > button {
+  padding: 10px 30px;
+  font-size: 0.9rem;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid black;
+   margin-left: 17vh;
+  margin-top: 6px;
+}
+.popUp__3 > div:nth-child(2) > button:hover {
+  color: white;
+  background: black;
+}
+.popUp__4 {
+  width: 22.563rem !important;
+  height: 37.375rem;
+margin-left: 0vh;
+  display: flex;
+  flex-direction: column;
+   position: relative;
+   border: 0.1vh solid transparent;
+   border-radius: 1vh;
+   overflow: hidden;
+  
+  
+}
+
+.popUp__4 > div:nth-child(1) {
+  width: 22.625rem !important;
+  height: 28.5rem;
+ 
+ 
+}
+.popUp__4 > div:nth-child(2) {
+  width: 22.625rem !important;
+
+  height: 9.063rem;
+}
+
+.popUp__4 > div:nth-child(2) > p:nth-child(1) {
+  font-size: 1.35rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 2.5vh;
+}
+.popUp__4 > div:nth-child(2) > p:nth-child(2) {
+  margin-top: -15px;
+  text-align: center;
+}
+
+.popUp__4 > div:nth-child(2) > button {
+  padding: 10px 30px;
+  font-size: 0.9rem;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid black;
+   margin-left: 17vh;
+  margin-top: 6px;
+}
+.popUp__4 > div:nth-child(2) > button:hover {
+  color: white;
+  background: black;
+}
+.popUp__5 {
+  width: 22.563rem !important;
+  height: 37.375rem;
+margin-left: 0vh;
+  display: flex;
+  flex-direction: column;
+   position: relative;
+   border: 0.1vh solid transparent;
+   border-radius: 1vh;
+   overflow: hidden;
+  
+  
+}
+
+.popUp__5 > div:nth-child(1) {
+  width: 22.625rem !important;
+  height: 28.5rem;
+ 
+ 
+}
+.popUp__5 > div:nth-child(2) {
+  width: 22.625rem !important;
+
+  height: 9.063rem;
+}
+
+.popUp__5 > div:nth-child(2) > p:nth-child(1) {
+  font-size: 1.35rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 2.5vh;
+}
+.popUp__5 > div:nth-child(2) > p:nth-child(2) {
+  margin-top: -15px;
+  text-align: center;
+}
+
+.popUp__5 > div:nth-child(2) > button {
+  padding: 10px 30px;
+  font-size: 0.9rem;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid black;
+   margin-left: 17vh;
+  margin-top: 6px;
+}
+.popUp__5 > div:nth-child(2) > button:hover {
+  color: white;
+  background: black;
+}
+
+
+.popUp__6 {
+  width: 22.563rem !important;
+  height: 37.375rem;
+margin-left:-0.2vh;
+  display: flex;
+  flex-direction: column;
+   position: relative;
+   margin-right: 0;
+   border: 0.1vh solid transparent;
+   border-radius: 1vh;
+   overflow: hidden;
+  
+  
+}
+
+.popUp__6 > div:nth-child(1) {
+  width: 22.625rem !important;
+  height: 28.5rem;
+ 
+ 
+}
+.popUp__6 > div:nth-child(2) {
+  width: 22.625rem !important;
+
+  height: 9.063rem;
+}
+
+.popUp__6 > div:nth-child(2) > p:nth-child(1) {
+  font-size: 1.35rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 2.5vh;
+}
+.popUp__6 > div:nth-child(2) > p:nth-child(2) {
+  margin-top: -15px;
+  text-align: center;
+}
+
+.popUp__6 > div:nth-child(2) > button {
+  padding: 10px 30px;
+  font-size: 0.9rem;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid black;
+   margin-left: 17vh;
+  margin-top: 6px;
+}
+.popUp__6 > div:nth-child(2) > button:hover {
+  color: white;
+  background: black;
+}

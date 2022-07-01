@@ -1,0 +1,179 @@
+.navbarDives{
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+.navbares {
+    display: grid;
+    grid-template-columns: 10% 60% 30%;
+    align-items: center;
+    /* position: relative; */
+    height: 50px;
+    padding-left: 1%;
+    margin-top: 1%;
+    background-color: transparent !important;
+    /* justify-content: space-between; */
+  }
+  
+  .navbares > div > img {
+    width: 100%;
+    /* padding-top:7%; */
+    margin-left: 20px;
+  }
+  .linkses {
+    display: flex;
+    /* padding-top:1%; */
+    margin-left: 30px;
+    /* width: 1000px; */
+    /* border: 1px solid black; */
+  }
+  .linkses > a {
+    margin-left: 3%;
+    font-size: 80%;
+    font-weight: 500;
+    width: auto;
+    color: black;
+    text-decoration: none;
+  }
+  .linkses > a:hover {
+    border-bottom: 1px solid rgb(142, 40, 40);
+  }
+  .rightIcons {
+    display: flex;
+    margin-left: 35%;
+    align-items: center;
+    gap: 15px;
+  }
+  .rightIcons img {
+    height: 20px;
+    width: 20px;
+  }
+  .search {
+    display: flex;
+    /* gap: 15px; */
+    /* justify-content: space-evenly; */
+    /* margin-right: 40px; */
+  }
+  .search input::placeholder {
+    color: rgb(36, 34, 34);
+    /* opacity: 1;  */
+    font-size: 14px;
+    font-weight: 550;
+  }
+
+  .search input {
+    border: none;
+    outline: none;
+    /* border-bottom: 1px solid #333; */
+    width: 80px;
+    /* padding-left: -10px; */
+    background-color: transparent;
+  }
+  .rightIcons > div > span {
+    /* margin-left:8%; */
+    margin-bottom: 10%;
+    height: 40%;
+  }
+  .secondDives
+  {
+    width: 80vw !important;
+   background-color: transparent !important;
+    margin-left: 0;
+  }
+  .secondDives > div {
+    /* z-index: 1; */
+    display: flex;
+    padding-left: 10%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    border-top: 1px solid rgb(207, 200, 200);
+    position: absolute;
+    z-index: 10;
+ 
+    width: 88.7vw;
+    background-color: white;
+   
+    
+  }
+  .secondDives > div > div {
+    padding-left: 2%;
+    margin-top: 0vh;
+    
+    background-color: white;
+  }
+  
+  .secondDives > div > div > a {
+    font-size: 80%;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+  }
+  .secondDives > div > div > a:hover {
+    border-bottom: 1px solid rgb(142, 40, 40);
+  }
+  .firstdataes > div {
+    z-index: 1;
+    border: 1px solid rgb(213, 205, 205);
+    width: 90%;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 23% 23% 23% 23%;
+  margin-left: -5vw;
+    padding-bottom: 4%;
+ margin-top: 3.5vh !important;
+    
+  }
+  .firstdataes > div > div {
+    padding: 4%;
+  }
+  .firstdataes > div > div > a {
+    font-size: 80%;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+  }
+  .firstdataes > div > div > a:hover {
+    border-bottom: 1px solid rgb(142, 40, 40);
+    /* color: blue; */
+  }
+   /* .secondDiv{
+    display: none;
+  }
+   .secondDiv:hover{
+    display: block;
+  } 
+  .links a:hover + .navbar {
+    /* display: block; */
+    /* background-color: blue; */ 
+  
+  /* .links > a:hover {
+    color: blue;
+    display: none;
+  } */
+
+  .navbares + div{
+    display: none;
+    color: blue;
+  }
+  .navbares:hover + div{
+    display: block;
+    /* background-color: red; */
+  }
+  .navbares + div:hover{
+    display: block;
+  }
+/* .firstdata{
+  display: none;
+}
+  .secondDiv > div + div:hover {
+display: flex;
+  } */
+  .secondDives > div + div{
+background-color: none;
+display: none;
+  }
+  .secondDives > div:hover + div{
+    display: block;
+  }
+  .secondDives > div + div:hover{
+    display: block;
+  }

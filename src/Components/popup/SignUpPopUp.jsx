@@ -84,6 +84,8 @@ const SignupPopup = () => {
         navigate("/");
         setIsAuth(true);
         flag = false;
+        setVisibility(false);
+
       }
       else if (user.email === formData.email && formData.password !== user.password) {
         alert.error("Wrong password!");
