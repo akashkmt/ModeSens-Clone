@@ -1,0 +1,14 @@
+.backToBag{
+    text-align:left;
+    font-weight:600;
+    letter-spacing:.5px; 
+    font-size:15px;
+    color:var(--gray);
+    cursor: pointer;
+}
+.formDivForAddress{
+    display: flex;
+    flex-direction: column;
+    border: 7px solid #f5f5f5;
+    padding-bottom: 10px;
+}
