@@ -2,13 +2,13 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 import Data from "./Data";
-// import { AuthContext } from "../../context/AuthContext";
+import { AuthContext } from "../../context/AuthContext";
 // import SignupPopup from "../popup/SignUpPopUp";
 
 function Navbar() {
   const [menu, setMenu] = useState("");
   console.log("navbar")
-  const { isAuth, setIsAuth } = useContext();
+  const { isAuth, setIsAuth } = useContext(AuthContext);
   return (
     <div className="navbarDives">
       <div className="navbares">
