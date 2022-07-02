@@ -3,14 +3,14 @@ import "./AddressForm.css";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 
-function AddressForm({ clickedOnCheckout, setClickedOnCheckout, clickedOnPaymentMethod, setClickedOnPaymentMethod }) {
+function AddressForm({setClickedOnCheckout, setClickedOnPaymentMethod }) {
   return (
     <div style={{ width: "930px", margin: "auto" }}>
       <p style={{ textAlign: "left", marginBottom: "-5px" }}>
         <span
           onClick={() => {
-            setClickedOnCheckout(!clickedOnCheckout);
-            setClickedOnPaymentMethod(!clickedOnPaymentMethod);
+            setClickedOnCheckout(false);
+            setClickedOnPaymentMethod(false);
           }}
           className="backToBag"
         >
@@ -47,7 +47,7 @@ function AddressForm({ clickedOnCheckout, setClickedOnCheckout, clickedOnPayment
             disabled
             id="country-name"
             label="Country"
-            defaultValue="United States"
+            defaultValue="India"
             variant="standard"
           />
           <TextField
@@ -66,7 +66,7 @@ function AddressForm({ clickedOnCheckout, setClickedOnCheckout, clickedOnPayment
           />
           <TextField
             required
-            type={"number"}
+            type={"tel"}
             id="zip-code"
             label="Zip Code"
             defaultValue=""
@@ -88,7 +88,7 @@ function AddressForm({ clickedOnCheckout, setClickedOnCheckout, clickedOnPayment
           />
           <TextField
             required
-            type={"number"}
+            type={"tel"}
             id="phone-number"
             label="Phone Number"
             defaultValue=""
