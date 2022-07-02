@@ -10,7 +10,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 11;
   background: rgba(0, 0, 0, 0.7);
   transition: opacity 500ms;
 
@@ -41,7 +41,7 @@
 
   margin-top: 0;
   color: #333;
-  font-family: Tahoma, Arial, sans-serif;
+  /* font-family: Tahoma, Arial, sans-serif; */
 
 }
 .popup .close {

@@ -15,7 +15,7 @@ function ItemCard({item,handleDeleteItemInCart, clickedOnCheckout}) {
             <p>Quantity : 1</p>
         </div>
         {
-            ! clickedOnCheckout ? <button onClick={()=> {handleDeleteItemInCart(item._id)}} className='deleteFromCartBtn'>X</button> : null
+            ! clickedOnCheckout ? <button onClick={()=> {handleDeleteItemInCart(item.id)}} className='deleteFromCartBtn'>X</button> : null
         }
     </div>
   )

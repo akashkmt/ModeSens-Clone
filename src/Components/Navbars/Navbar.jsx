@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import "./navbar.css";
 import Data from "./Data";
 import { AuthContext } from "../../context/AuthContext";
-// import SignupPopup from "../popup/SignUpPopUp";
+import { useSelector } from "react-redux";
+import SignupPopup from "../popup/SignUpPopUp";
 
 function Navbar() {
   const [menu, setMenu] = useState("");
-  console.log("navbar")
+  const {count} = useSelector(state => state.cartCount);
+  // console.log("navbar")
   const { isAuth, setIsAuth } = useContext(AuthContext);
   return (
     <div className="navbarDives">
@@ -22,7 +24,7 @@ function Navbar() {
           <Link
             to="womens"
             onMouseEnter={() => {
-              console.log("mouse enter")
+              // console.log("mouse enter")
               let d = "women";
               setMenu(<Data r={d} />);
             }}
@@ -36,7 +38,7 @@ function Navbar() {
           <Link
             to="mens"
             onMouseEnter={() => {
-              console.log("mouse enter")
+              // console.log("mouse enter")
               let d = "mens";
               setMenu(
                 <Data
@@ -173,12 +175,22 @@ function Navbar() {
               alt=""
             ></img>
           </div>
-          {/* <SignupPopup /> */}
-          <div>
+          <SignupPopup />
+          {/* <div>
+            
             <img
               src="https://cdn.modesens.com/static/img/20200612shopping_bag2.svg"
               alt=""
             />
+            
+          </div> */}
+          <div className="add-to-bag"> <Link style={{ textDecoration: 'none'}}
+ to="/checkout">
+            <img
+              src="https://cdn.modesens.com/static/img/20200612shopping_bag2.svg"
+              alt=""
+              /><span> {count} </span>
+              </Link>
           </div>
           <div className="search">
             <img

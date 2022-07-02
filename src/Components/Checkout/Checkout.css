@@ -30,6 +30,9 @@
     cursor: pointer;
     border-radius: 0px;
 }
+.clickableButton:hover{
+    border: 1px solid black;
+}
 
 .cartEmptySpanDiv>p{
     color: #1c1c1c;

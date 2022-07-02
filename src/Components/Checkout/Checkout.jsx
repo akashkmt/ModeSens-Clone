@@ -35,7 +35,7 @@ function Checkout() {
       let allCartData = await fetch(`http://localhost:8080/users/${userId}`);
       let allCartDataJson = await allCartData.json();
       let cart = allCartDataJson.cart;
-      let updatedCart = cart.filter(item => item._id !== itemId);
+      let updatedCart = cart.filter(item => item.id !== itemId);
 
       await fetch(`http://localhost:8080/users/${userId}`, {
         method: "PUT",

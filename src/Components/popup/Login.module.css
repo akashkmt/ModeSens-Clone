@@ -1,6 +1,3 @@
-* {
-  font-family: 'SuisseIntl', 'Lato';
-}
 
 .show {
   display: block;
@@ -53,7 +50,7 @@
   margin-bottom: 8px;
   font-weight: 300;
   font-size: 18px;
-  font-family: 'SuisseIntl', 'Lato';
+  /* font-family: 'SuisseIntl', 'Lato'; */
 
 }
 
@@ -62,7 +59,7 @@
   font-weight: 300;
   width: 60%;
   margin: 0 auto;
-  font-family: 'SuisseIntl', 'Lato';
+  /* font-family: 'SuisseIntl', 'Lato'; */
   /* margin-bottom: -16px; */
 }
 
@@ -94,14 +91,14 @@
   margin-top: 16px;
   font-weight: 300;
   font-size: 18px;
-  font-family: 'SuisseIntl', 'Lato';
+  /* font-family: 'SuisseIntl', 'Lato'; */
 }
 .logrightp {
   font-size: 15px;
   font-weight: 300;
   width: 60%;
   margin: 0 auto;
-  font-family: 'SuisseIntl', 'Lato';
+  /* font-family: 'SuisseIntl', 'Lato'; */
   margin-bottom: 20px;
   margin-top: 10px;
 }
@@ -123,7 +120,7 @@
   margin-top: 10px;
   padding: 12px 80px;
   border: 1px solid black;
-  font-family: 'SuisseIntl', 'Lato';
+  /* font-family: 'SuisseIntl', 'Lato'; */
 
 
 }
@@ -151,7 +148,7 @@
   margin-top: 1px;
   margin-left: 10px;
   font-size: x-small;
-  font-family: 'SuisseIntl', 'Lato';
+  /* font-family: 'SuisseIntl', 'Lato'; */
 
 }
 
@@ -174,7 +171,7 @@ input[type="radio"]:checked {
 
 .radioBtn {
   margin-top: 8px;
-  font-family: 'SuisseIntl', 'Lato';
+  /* font-family: 'SuisseIntl', 'Lato'; */
   font-size: 15px;
   font-weight: 400;
   margin-left: 20px;
@@ -264,7 +261,7 @@ a {
   cursor: pointer;
   text-decoration: underline;
   font-weight: 300;
-  font-family: 'SuisseIntl', 'Lato';
+  /* font-family: 'SuisseIntl', 'Lato'; */
   font-size: 14px;
   margin-top: 10px;
 }

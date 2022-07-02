@@ -14,7 +14,7 @@ function App() {
   return (
     
       <div className='App' style={{textAlign:'center'}} >
-       <Navbar/>
+      <Navbar/>
       <Routes>
         {/* please Install these packages:
         //npm i react-material-ui-carousel

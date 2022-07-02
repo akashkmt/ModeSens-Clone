@@ -1,11 +1,13 @@
 import { combineReducers, legacy_createStore as createStore } from 'redux';
 import cartReducer from './Cart/reducer';
 import loginReducer from './login/reducer';
+import { cartCountReducer } from './CartCount/reducer';
 
 const rootReducer = combineReducers(
     {
         user: loginReducer,
-        cart: cartReducer
+        cart: cartReducer,
+        cartCount: cartCountReducer
     }
 )
 

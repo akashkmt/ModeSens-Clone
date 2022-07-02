@@ -1,12 +1,8 @@
 {
   "users": [
     {
-      "cart": [],
-      "id": "1"
-    },
-    {
-      "email": "a@g.com",
-      "password": "123",
+      "email": "testmail@gmail.com",
+      "password": "12345678",
       "id": "1",
       "cart": [
         {
