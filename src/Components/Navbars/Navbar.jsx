@@ -2,15 +2,13 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 import Data from "./Data";
-// import { AuthContext } from "../../Context/AuthContext";
-// import SignupPopup from "../../PopUp/SignUpPopUp";
+// import { AuthContext } from "../../context/AuthContext";
+// import SignupPopup from "../popup/SignUpPopUp";
 
 function Navbar() {
   const [menu, setMenu] = useState("");
   console.log("navbar")
-  // const { isAuth, setIsAuth } = useContext();
-  let isAuth = true;
-  let setIsAuth = true;
+  const { isAuth, setIsAuth } = useContext();
   return (
     <div className="navbarDives">
       <div className="navbares">
@@ -175,7 +173,7 @@ function Navbar() {
               alt=""
             ></img>
           </div>
-          {/* {isAuth ? <div></div> : <SignupPopup />} */}
+          {/* <SignupPopup /> */}
           <div>
             <img
               src="https://cdn.modesens.com/static/img/20200612shopping_bag2.svg"
@@ -192,9 +190,9 @@ function Navbar() {
           </div>
           <div
             style={{ marginTop: "-10px", cursor: "pointer" }}
-            // onClick={() => setIsAuth(false)}
+            onClick={() => setIsAuth(false)}
           >
-            {/* {isAuth ? "Log Out" : ""} */}
+            {isAuth ? "Log Out" : ""}
           </div>
         </div>
       </div>
