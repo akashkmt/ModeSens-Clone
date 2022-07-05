@@ -23,6 +23,7 @@ function Checkout() {
             cart: updatedCart
             })
         });
+        
         getData(userId);
 
     } catch (error) {
@@ -38,7 +39,7 @@ function Checkout() {
       let updatedCart = cart.filter(item => item.id !== itemId);
 
       await fetch(`http://localhost:8080/users/${userId}`, {
-        method: "PUT",
+        method: "PATCH",
         headers: {
           "Content-Type": "application/json"
           },
