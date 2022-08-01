@@ -226,10 +226,10 @@ const Items = ({ props }) => {
             onClick={() => {
               handleUser(e);
             }}
-            key={e._id}
+            key={e.id}
           >
 
-            <Link to={`/${category}/${e._id}`} style={{ textDecoration: "none" }}>
+            <Link to={`/${category}/${e.id}`} style={{ textDecoration: "none" }}>
               <HeartDIv>
                 <HeartImg
                   src="https://cdn.modesens.com/static/img/20210601heart.svg"

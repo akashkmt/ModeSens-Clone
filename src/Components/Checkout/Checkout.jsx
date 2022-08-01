@@ -4,12 +4,15 @@ import ShoppingBag from './ShoppingBag/ShoppingBag'
 import Summary from './Summary/Summary';
 import { Link } from 'react-router-dom';
 import "./Checkout.css"
+import { decreaseCount } from '../../redux/CartCount/action';
+import { useDispatch } from "react-redux"
 
 function Checkout() {
   const [clickedOnCheckout, setClickedOnCheckout] = React.useState(false);
   const [clickedOnPaymentMethod, setClickedOnPaymentMethod] = React.useState(false);
   const userId = 1;
   const [cart, setCart] = React.useState([]);
+  const dispatch = useDispatch();
 
   const emptyCart = async () => {
     try {
@@ -31,11 +34,14 @@ function Checkout() {
   }
 
   const handleDeleteItemInCart = async(itemId) => {
+    
+    dispatch(decreaseCount())
+
     try {
       let allCartData = await fetch(`http://localhost:8080/users/${userId}`);
       let allCartDataJson = await allCartData.json();
       let cart = allCartDataJson.cart;
-      let updatedCart = cart.filter(item => item._id !== itemId);
+      let updatedCart = cart.filter(item => item.id !== itemId);
 
       await fetch(`http://localhost:8080/users/${userId}`, {
         method: "PUT",
@@ -46,6 +52,7 @@ function Checkout() {
             cart: updatedCart
             })
         });
+
         getData(userId);
     } catch (error) {
       console.log(error);

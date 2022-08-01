@@ -2,13 +2,18 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 import Data from "./Data";
-// import { AuthContext } from "../../context/AuthContext";
+import { AuthContext } from "../../context/AuthContext";
+import {useSelector} from "react-redux"
 // import SignupPopup from "../popup/SignUpPopUp";
 
 function Navbar() {
   const [menu, setMenu] = useState("");
-  console.log("navbar")
-  const { isAuth, setIsAuth } = useContext();
+  const [cartCount,setCartCount] = useState(0)
+  const { isAuth, setIsAuth } = useContext(AuthContext);
+  let {count} = useSelector(state => state.count)
+  
+
+
   return (
     <div className="navbarDives">
       <div className="navbares">
@@ -174,12 +179,15 @@ function Navbar() {
             ></img>
           </div>
           {/* <SignupPopup /> */}
-          <div>
+            <Link to="/summary" >
+          <div className="cartLogo" >
             <img
               src="https://cdn.modesens.com/static/img/20200612shopping_bag2.svg"
               alt=""
             />
+            <span>{count}</span>
           </div>
+            </Link>
           <div className="search">
             <img
               style={{ width: "50%%" }}

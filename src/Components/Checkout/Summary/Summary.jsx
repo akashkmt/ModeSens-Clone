@@ -4,6 +4,8 @@ import "./Summary.css";
 import Alert from '@mui/material/Alert';
 import { useNavigate } from "react-router-dom";
 import Stack from '@mui/material/Stack';
+import {useDispatch} from "react-redux"
+import { startCount } from "../../../redux/CartCount/action";
 
 function Summary({
   cart,
@@ -20,6 +22,7 @@ function Summary({
   
   const [proceed, setProceed] = React.useState(false);
   const navigate = useNavigate();
+  const dispatch = useDispatch()
 
   const handlePlaceOrder = () => {
     if(cardNumber.length === 19 && cardThru.length === 7 && cardCVV.length === 3){
@@ -28,12 +31,14 @@ function Summary({
       setTimeout(() => {
         setProceed(false);
         emptyCart();
+        dispatch(startCount())
         navigate("/");
       }
       , 3000);
 
     }
   }
+
 
   return cart ? (
     <div style={{ width: "930px", margin: "auto" }}>
@@ -149,7 +154,7 @@ function Summary({
             </div>
           ) : clickedOnCheckout && clickedOnPaymentMethod && !proceed ? (
             <PaymentForm setCardNumber={setCardNumber} setCardThru={setCardThru} setCardCVV={setCardCVV} />
-          ) : proceed ? <div><Stack sx={{ width: '100%' }} spacing={2}><Alert severity="success">Order Placed --- <strong>Successfully</strong></Alert></Stack></div>  : null }
+          ) : proceed ? <div><Stack sx={{ width: '100%' }} spacing={2}><Alert severity="success">Order Placed --- <strong  >Successfully</strong></Alert></Stack></div>  : null }
         </div>
         {clickedOnCheckout ? (
           <button onClick={handlePlaceOrder} className="checkOutBtn">PLACE ORDER</button>
